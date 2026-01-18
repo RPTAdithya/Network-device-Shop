@@ -1,0 +1,35 @@
+-- Create Database
+CREATE DATABASE buyitem_shop;
+USE buyitem_shop;
+
+-- 1. Table for Product Categories
+-- Stores the names and local image paths for your shop grid
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    image_path VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Table for Contact Us Messages
+-- Stores inquiries sent through the help form
+CREATE TABLE contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    status ENUM('New', 'Replied', 'Closed') DEFAULT 'New',
+    received_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 3. Initial Data Insertion for Products
+INSERT INTO products (name, image_path) VALUES 
+('Access Points', 'ap.jpg'),
+('Internet Dongles', 'dongle.jpg'),
+('Network Cables', 'cables.jpg'),
+('Network Jack & Adapter', 'jack.jpg'),
+('Network Routers', 'router.jpg'),
+('Network Switches', 'switch.jpg'),
+('Network Tools Equipment', 'tools.jpg'),
+('Wi-Fi Adapters', 'adapter.jpg'),
+('WiFi Extenders', 'extender.jpg');

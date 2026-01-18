@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #1f3c88;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+/* Category Grid */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+}
+
+/* Category Card */
+.category-card {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Image Box */
+.category-card img {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid #dcdcdc;
+    padding: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.category-card img:hover {
+    border-color: #1f3c88;
+    transform: scale(1.05);
+}
+
+/* Category Text */
+.category-card p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #444;
+}
